@@ -1,0 +1,37 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class CoffeeMachine {
+  public static void main(String[] args) throws java.lang.Exception{
+    Scanner sc = new Scanner(System.in);
+    int summa = sc.nextInt();
+    int cappucino = 500;
+    int espresso = 400;
+    int americano = 300;
+    int water = 50;
+    boolean canBuyAnything = false;
+    System.out.println("----Приветствуем вас, я - кофемашина!----");
+    System.out.println("Введите сумму которую вы имеете:);
+    System.out.println(summa);
+    System.out.println("----------------------------------------------");
+    System.out.println("-Cappucino----------------------------500 KZT-");
+    System.out.println("-Espresso-----------------------------400 KZT-");
+    System.out.println("-Americano----------------------------300 KZT-");
+    System.out.println("-Water-------------------------------- 50 KZT-");
+    
+    if(summa>=cappucino){
+      System.out.println("Вы можете купить каппучино");
+      canBuyAnything = true;
+    }if(summa>=espresso){
+      System.out.println("Вы можете купить эспрессо");
+      canBuyAnything = true;
+    }if(summa>=americano){
+      System.out.println("Вы можете купить американо");
+      canBuyAnything = true;
+    }if (summa >= water){
+      System.out.println("Вы можете купить воду");
+      canBuyAnything = true;
+    } if(canBuyAnything == false){
+        System.out.println("Недостаточно средств");
+    }
+}
